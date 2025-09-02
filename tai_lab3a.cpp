@@ -68,20 +68,39 @@ Restaurant getRestaurantData()
     */
 
     Restaurant rest;
+    string temp;
 
     cout << "Enter restaurant name: ";
     getline(cin, rest.name);
+
     cout << "Enter city: ";
     getline(cin, rest.city);
+
     cout << "Enter seating capacity: ";
-    cin >> rest.seating;
-    cin.ignore(); 
+    cin >> temp;
+    cin.ignore();
+    try {
+        rest.seating = stoi(temp);
+    }
+    catch (...) {
+        cerr << "Invalid input. Seating capacity must be an integer. 0 stored." << endl;
+        rest.seating = 0; // Default value
+    }
+
     cout << "Enter cuisine type: ";
     getline(cin, rest.cuisine);
+
     cout << "Enter rating: ";
-    cin >> rest.rating;
+    cin >> temp;
     cin.ignore();
- 
+    try {
+        rest.rating = stof(temp);
+    }
+    catch (...) {
+        cerr << "Invalid input. Rating must be a number. 0.0 stored." << endl;
+        rest.rating = 0.0; // Default value
+    }
+
     return rest;
 }
 
