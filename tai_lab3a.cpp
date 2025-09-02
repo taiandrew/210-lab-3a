@@ -6,7 +6,7 @@
 
 using namespace std;
 
-// Structure for Restaurant
+// Structure for restaurant info
 struct Restaurant
 {
     string name;
@@ -25,6 +25,22 @@ void displayRestaurant(const Restaurant &r);
 //----------
 int main() 
 {
+    /*
+    Ask user to input restaurant details until quits
+    Prints details
+    */
+
+    // Get restaurant info
+    vector<Restaurant> restaurants;
+    Restaurant this_rest;
+    int cont = 1;
+
+    while (cont == 1)
+    {
+        this_rest = getRestaurantData();
+        
+    }
+
 
     return 0;
 }
@@ -37,8 +53,8 @@ Restaurant getRestaurantData()
 {
     /*
     Get restaurant data from user input
-    Inputs: none
-    Returns: Restaurant struct
+    args: none
+    returns: Restaurant struct
     */
 
     Restaurant rest;
@@ -63,13 +79,12 @@ void displayRestaurant(const Restaurant &rest)
 {
     /*
     Display restaurant details
-    Inputs: pointer to Restaurant struct
-    Returns: none
+    args: pointer to Restaurant struct
+    returns: none
     */
 
     cout << "---------------------" << endl;
-    cout << "Restaurant Details:" << endl;
-    cout << "Name: " << rest.name << endl;
+    cout << "Restaurant: " << rest.name << endl;
     cout << "City: " << rest.city << endl;
     cout << "Seating Capacity: " << rest.seating << endl;
     cout << "Cuisine Type: " << rest.cuisine << endl;
