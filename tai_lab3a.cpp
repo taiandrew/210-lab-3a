@@ -38,9 +38,18 @@ int main()
     while (cont == 1)
     {
         this_rest = getRestaurantData();
-        
+        restaurants.push_back(this_rest);
+
+        cout << "Do you want to enter another? (1:Yes, 0:No)";
+        cin >> cont;
+        cin.ignore();
     }
 
+    // Display restaurants
+    for (const Restaurant &rest : restaurants)
+    {
+        displayRestaurant(rest);
+    }
 
     return 0;
 }
