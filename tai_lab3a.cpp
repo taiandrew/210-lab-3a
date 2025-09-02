@@ -43,6 +43,7 @@ int main()
         cout << "Do you want to enter another? (1:Yes, 0:No)";
         cin >> cont;
         cin.ignore();
+        cout << endl;
     }
 
     // Display restaurants
