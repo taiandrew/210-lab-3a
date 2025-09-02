@@ -1,4 +1,4 @@
-// COMSC 210 | Andrew Tai | Sep 2 2025
+// COMSC 210 | Lab 3a | Andrew Tai | Sep 2 2025
 // IDE: Visual Studio Code
 
 #include <iostream>
